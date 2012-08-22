@@ -1,0 +1,18 @@
+
+/* additional styles just to make things look a bit nicer */
+body { margin:0; padding:0; background:#EBEBEB; font:62.5% Arial, sans-serif; color:#fff; background: #000 }
+h1,h2,h3,h4,h5,h6 {font-family:Georgia, "Times New Roman", Times, serif; font-style:italic; text-align:center; }
+img { display:block; margin:2em auto; border:0; }
+a { color:#ffff00; }
+	a:hover { text-decoration:none; }
+li { margin-bottom:1em; }	
+	li ul { margin-top:1em; }
+	li li { list-style:square; }
+.flt { float:left; }
+.frt { float:right; }
+.cl:before, .cl:after { content:""; display:table; }
+.cl:after { clear:both; }
+.step { position: relative; width:94em; min-height:80em;  margin:0 auto; padding:2em; text-align:left; border:10px solid #fff; background: #000;   }
+.twitter { position: absolute; bottom:1em; left:2em; width:94em;}
+	.twitter span { font-size:1.6em; }
+.wysiwyg { font-size:2em }

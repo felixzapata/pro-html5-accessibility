@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+	<head>
+		<title>Revisión del libro "Pro HTML5 Accessibility"</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">	
+		<link href="styles.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div id="impress">
+						
+			<div class="step" data-x="0" data-y="0">
+				<div class="wysiwyg">
+					<h1>Revisión del libro "Pro HTML5 Accessibility"</h1>
+					<img src="img/event_113816312.jpg" alt="portada del libro" />
+					
+				</div>	
+				<div class="cl twitter">
+						<span class="flt"><a href="http://twitter.com/felixzapata">@felixzapata</a></span>
+						<span class="frt"><a href="http://twitter.com/MadAccTIC/">@MadAccTIC</a> / #MadAccTIC</span>
+					</div>	
+				
+			</div>
+			
+			<div class="step" data-x="500" data-y="-1000">
+				<div class="wysiwyg">
+					<h2>Un resumen rápido del libro</h2>
+					<ul>
+						<li>Es un libro sobre HTML5 y sobre Accesibilidad principalmente (<strong>y en ocasiones habla sobre la Acccesibilidad en HTML5</strong>). Otro de los capítulos finales está dedicado a la usabilidad</li>	
+						<li>Los dos primeros capítulos se habla sobre qué consiste la Accesibilidad, principales problemas de acceso por parte de los usuarios y uso de las herramientas de ayuda
+							<ul>
+								<li>¿Qué es un lector de pantalla?</li>
+								<li>¿Cómo se usa JAWS? ¿Cómo se usa VoiceOver? ¿Cómo se usa un magnificador de pantalla?,etc. </li>
+							</ul>	
+						</li>
+						<li>Ejemplos del uso de WAI-ARIA. Pero recomiendo mejor este otro libro para eso <a href="http://www.amazon.com/Designing-Progressive-Enhancement-Building-Everyone/dp/0321658884/ref=sr_1_1?ie=UTF8&qid=1337797674&amp;sr=8-1">Designing with Progressive Enhancement: Building the Web that Works for Everyone</a></li>
+						<li>Accesibilidad de las nuevas etiquetas de estructura de contenido
+							<ul>	
+								<li>Debate sobre si usar un <code>&lt;h1&gt;</code> o varios por página</li>	
+								<li><strong>No menciona los problemas de JAWS a la hora de acceder correctamente a los encabezados que se encuentran dentro de una etiqueta como <code>&lt;section&gt;</code> o <code>&lt;article&gt;</code></strong> aunque sí menciona el problema existente cuando existen estos elementos anidados: <a href="http://www.accessibleculture.org/articles/2011/10/jaws-ie-and-headings-in-html5/">JAWS, IE and Headings in HTML5</a></li>
+							</ul>	
+						</li>
+						<li>Cómo interactúan las herramientas de ayuda con los navegadores</li>
+						<li>Multimedia, formularios y tablas accesibles</li>
+						<li>Describe los <a href="http://www.ncsu.edu/dso/general/universal-design.html" hreflang="en">7 principios del diseño universal</a></li>
+					</ul>	
+				</div>	
+				<div class="cl twitter">
+						<span class="flt"><a href="http://twitter.com/felixzapata">@felixzapata</a></span>
+						<span class="frt"><a href="http://twitter.com/MadAccTIC/">@MadAccTIC</a> / #MadAccTIC</span>
+					</div>	
+			</div>
+			
+			<div class="step" data-x="1000" data-y="-2000">
+				<div class="wysiwyg">
+					<h2>Cosas que me han llamado la atención</h2>
+					<ul>
+						<li>El rol de presentación: <code>&lt;img src="unaimagenconfinesdecorativos.png" role="presentation" /&gt;</code></li>
+						<li>Diferentes usos de descripciones de imágenes para por ejemplo fotos, o gráficos estadísticos
+								<ul>
+									<li>
+							<code>
+								
+								&lt;figure&gt;&lt;img src="unaimagencualquiera.png" /&gt;&lt;figurecaption&gt;una descripción de la imagen&lt;/figurecaption&gt;&lt;/figure&gt;
+								
+							</code>	
+								</li>
+								<li>
+									<code>	&lt;img src="unaimagenconfinesdecorativos.png" alt="este atributo le sigo usando" aria-describedby="un_ID_de_mi_pagina" /&gt;	</code>		
+								</li>
+							</ul>	
+						</li>
+						<li>Concepto: <em lang="en">Semantic Ninjas</em>
+							<ul>
+								<li lang="en">"So don´t think in absolutes; there are many relative considerations when it comes to HTML5 and accessibility"</li>
+								<li lang="en">"Having some heading structure, rather than one, on a web document is far more important than merely ensuring the headings are ordered in the correct way"</li>
+							</ul>
+						</li>
+						<li>Tabla de etiquetas y su correspondiente versión en WAI-ARIA</li>
+						<li>Construyendo un reproductor de videos accesible</li>
+					</ul>
+				</div>	
+				<div class="cl twitter">
+						<span class="flt"><a href="http://twitter.com/felixzapata">@felixzapata</a></span>
+						<span class="frt"><a href="http://twitter.com/MadAccTIC/">@MadAccTIC</a> / #MadAccTIC</span>
+					</div>	
+			</div>
+			
+			<div class="step" data-x="1500" data-y="-3000">
+				<div class="wysiwyg">
+					<h2>Nuevas maneras de describir las tablas mediante HTML5</h2>
+					<ul>
+						<li>Antes de hacer una tabla (al margen de si usamos HTML5 o no) las preguntas de rigor:
+							<ul>
+								<li>Ayuda que la tabla que construyamos sea simple.</li>
+								<li>Evitar celdas o columnas que agrupen varias celdas o columnas (es decir, celdas con valores <code>rowspan</code> o <code>colspan</code></li>
+								<li>¿Realmente necesitamos presentar los datos como tabla?</li>
+							</ul>
+						</li>
+						<li>Método 1: describir la tabla en el propio contexto en que se encuentra. Por ejemplo mediante un párrafo por encima de ésta perteneciendo ambos a una etiqueta <code>section</code></li>
+						<li>Método 2: Usar el atributo <code>aria-describedby</code> similar al ejemplo anterior de la imagen</li>
+						<li>Método 3: Usar la etiqueta <code>caption</code>. Tal vez no demasiado útil según que casos de tablas</li>
+						<li>Método 4: Usar la etiqueta <code>details</code> y la etiqueta <code>summary</code>. La especificación de HTML5 recomienda que la etiqueta <code>caption</code> sea combinada con la etiqueta <code>details</code>. Éste elemento representa un bloque adicional donde el usuario puede obtener información extra. La etiqueta <code>summary</code> es hija siempre de <code>details</code>. 
+<pre>
+	<code>
+&lt;table&gt;
+&lt;caption&gt;
+	&lt;strong&gt;un título para describir esta tabla&lt;/strong&gt;
+&lt;details&gt;
+	&lt;summary&gt;El título de la descripción adicional&lt;/summary&gt;
+	&lt;p&gt;La descripción más completa de la tabla que podamos dar en este caso 
+	aprovechando la nueva especificación&lt;/p&gt;
+&lt;/details&gt;
+&lt;/caption&gt;
+	</code>	
+</pre>	
+						</li>
+						<li>Vale, ¿y el atributo <code>summary</code>?</li>
+					</ul>
+				</div>	
+				<div class="cl twitter">
+						<span class="flt"><a href="http://twitter.com/felixzapata">@felixzapata</a></span>
+						<span class="frt"><a href="http://twitter.com/MadAccTIC/">@MadAccTIC</a> / #MadAccTIC</span>
+					</div>					
+			</div>
+			
+			<div class="step" data-x="2000" data-y="-4000">
+				<div class="wysiwyg">
+					<h2>JavaScript</h2>
+					<ul>
+						<li>Útil cuando se usa correctamente</li>
+						<li><p>HTML5 contiene numerosas etiquetas que son accesibles mediante teclado (y pueden recibir el foco) en últimas versiones de navegadores más allá de los enlaces y la etiqueta de formulario:</p>
+							<ul>
+								<li><code>audio</code></li>
+								<li><code>datalist</code></li>
+								<li><code>color</code></li>
+								<li><code>date</code></li>
+								<li>...</li>
+							</ul>	
+							<p>Lo cual no significa que por ser accesibles mediante teclado ya son completamente accesibles. Ahí es donde entran en juego los roles</p>
+						</li>
+						<li><p>WAI-ARIA: proporciona un mecanismo para que el desarrollador puede describir nuevas estructuras de navegación así como funcionalidades de tal modo que puedan ser reconocidos por herramientas de ayuda. Pero cuidado con añadir más accesibilidad de la necesaria provocando redundancias:</p> 
+<pre>
+	<code>
+&lt;label&gt; for="address1"&gt;Dirección [Campo obligatorio]: &lt;/label&gt;
+&lt;input id="address1" type="text" name="address1" aria-required="true" /&gt;
+	</code>
+</pre>							
+<p>Algunos de lo roles son similares a elementos y/o controles existentes en HTML5. La razón de su utilización redundante es que puede ser más fácil que una herramienta de ayuda soporte un rol de WAI-ARIA que alguno de los controles y/o elementos nuevos.</p>
+						</li>
+						<li>Tabla de roles que JAWS reconoce</li>
+					</ul>				
+				</div>
+				<div class="cl twitter">
+						<span class="flt"><a href="http://twitter.com/felixzapata">@felixzapata</a></span>
+						<span class="frt"><a href="http://twitter.com/MadAccTIC/">@MadAccTIC</a> / #MadAccTIC</span>
+					</div>	
+			</div>
+			
+			<div class="step" data-x="2500" data-y="-5000">
+				<div class="wysiwyg">
+					<h2>Formularios</h2>
+					<ul>
+						<li>Básicamente, se aplican las mismas consideraciones para crear formularios accesibles en HTML5 que en HTML4 </li>
+						<li>El capítulo dedicado a los formularios cuenta básicamente las etiquetas y atributos nuevos y explica buenas maneras de creación de formularios</li>
+					</ul>	
+				</div>
+				<div class="cl twitter">
+						<span class="flt"><a href="http://twitter.com/felixzapata">@felixzapata</a></span>
+						<span class="frt"><a href="http://twitter.com/MadAccTIC/">@MadAccTIC</a> / #MadAccTIC</span>
+					</div>	
+			</div>
+			
+			<div class="step" data-x="3000" data-y="-6000">
+				<div class="wysiwyg">
+					<h2>Enlaces de interés</h2>
+					<ul>
+						<li><a href="http://delicious.com/xar/accesibilidad" hreflang="en">Enlaces míos que recopilo sobre accesibilidad</a></li>	
+						<li><a href="http://www.slideshare.net/rajeshlal/accessible-design-with-html5-13021406" hreflang="en" lang="en">Accessible Design with HTML5</a></li>
+						<li><a href="http://www.accessibleculture.org/articles/2012/03/screen-readers-and-details-summary/" hreflang="en" lang="en">Screen Readers and details/summary</a></li>
+						<li><a href="http://www.paciellogroup.com/blog/2012/05/notes-on-using-multiple-labels-for-a-control-using-the-label-element/" hreflang="en" lang="en">Notes on applying multiple labels for a control using the label element</a></li>
+						<li><a href="http://www.accessibleculture.org/articles/2011/10/jaws-ie-and-headings-in-html5/" hreflang="en" lang="en">JAWS, IE and Headings in HTML5</a></li>
+						<li><a href="http://www.456bereastreet.com/archive/201205/make_sure_your_html5_document_outline_is_backwards_compatible/" hreflang="en" lang="en">Make sure your HTML5 document outline is backwards compatible</a></li>
+						<li><a href="http://www.accesibilidadweb.com/blog/index.php/guias/proyecto-de-fin-de-carrera-sobre-html5-y-la-accesibilidad-web">Proyecto de fin de carrera sobre HTML5 y la accesibilidad web</a></li>
+						<li><a href="http://olgacarreras.blogspot.com.es/2012/02/html-5-y-accesibilidad.html">HTML 5 y accesibilidad</a> de Olga Carreras
+							<ul>
+								<li><a href="http://dl.dropbox.com/u/573324/CSUN2012/index.html" hreflang="en" lang="en">Accessibility of HTML5 and Rich Internet Applications</a></li>
+								<li><a href="http://www.html5accessibility.com/tests/landmarks.html" hreflang="en" lang="en">ARIA Landmark role support tests - 21/11/2011</a>
+							</ul>	
+						</li>	
+						<li><a href="http://www.html5accessibility.com/" hreflang="en" lang="en">HTML5 accessibility</a>. Muy útil para saber el cómo interpretan los navegadores aquellas etiquetas que no soportan</li>
+						<li lang="en"><a href="http://webaim.org/blog/semantic-automation/" hreflang="en">Semantic Automation</a>: <em>"When computers guess, the results are often not very good. But guessing is usually better than nothing."</em></li>
+						<li lang="en"><a href="http://alistairduggin.co.uk/blog/videos-accessibility-presentations/" hreflang="en">Videos: Accessibility, Progressive Enhancement and HTML5</a></li>
+					</ul>
+				</div>
+				<div class="cl twitter">
+						<span class="flt"><a href="http://twitter.com/felixzapata">@felixzapata</a></span>
+						<span class="frt"><a href="http://twitter.com/MadAccTIC/">@MadAccTIC</a> / #MadAccTIC</span>
+					</div>	
+			</div>
+			
+		</div>
+		<script type="text/javascript" src="impress.js"></script>
+	</body>
+</html>
